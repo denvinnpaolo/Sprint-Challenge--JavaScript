@@ -13,7 +13,7 @@
 //     return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
 //   };
 
-class CuboidMaker{
+class CuboidMaker{  //this class will not work because there is a CuboidMakere declared at the prototypes.js. it will work if its commented out otherwise this will be seen as a second declaration of the same name.
     constructor(prop){
       this.length=prop.length;
       this.width=prop.width;
