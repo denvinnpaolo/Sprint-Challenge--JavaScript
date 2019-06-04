@@ -127,11 +127,9 @@ The zoo wants to display both the scientific name and the animal name in front o
 
 */
 
-const animalNames = [];
-let counter=0;
-zooAnimals.forEach(function(){
-  animalNames[counter]={name:zooAnimals[counter].animal_name, scientific_name:zooAnimals[counter].scientific_name };
-  counter++;
+var animalNames = [];
+zooAnimals.forEach((animal,i)=>{
+  return animalNames[i]={"name":animal.animal_name, "scientific_name":animal.scientific_name };
 });
 console.log(animalNames);
 
@@ -141,9 +139,9 @@ The zoos need a list of all their animal's names (names only, not scientific) co
 
 */
 
-const lowerCase =[];
-zooAnimals.map((first,i)=>{
-  lowerCase[i]=zooAnimals[i].animal_name.toLowerCase();
+var lowerCase =[];
+lowerCase= zooAnimals.map((animal)=>{
+  return animal.animal_name.toLowerCase();
 });
 console.log(lowerCase); 
 /* Request 3: .filter() 
@@ -153,9 +151,9 @@ The zoos are concenred about animals with a lower population count. Find out whi
 */
 
 
-const lowerPopulation = [];
-zooAnimals.filter((first,i)=>{
-  lowerPopulation[i]=zooAnimals[i].population<5;
+var lowerPopulation = [];
+lowerPopulation=zooAnimals.filter((animal)=>{
+ return animal.population<5;
 });
 console.log(lowerPopulation);
 
